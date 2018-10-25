@@ -2,8 +2,174 @@
 <html>
 	<head>
 		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link rel="stylesheet" type="text/css" href="lib/bootstrap/css/bootstrap.min.css"/>
 		<title>首页</title>
 	</head>
 	<body>
+		
+  <div class="container">
+  	<nav class="navbar navbar-inverse">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-navbar">
+        
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#">拉勾网管理系统</a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-navbar">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="#">首页 </a></li>
+        
+        <li  data-toggle="modal" data-target="#guanModal">
+          <a href="#">职位管理系统</a>
+          
+        </li>
+      </ul>
+     
+      <ul class="nav navbar-nav navbar-right">
+        <li data-toggle="modal" data-target="#loginModal"><a href="#">登录</a></li>
+        <li data-toggle="modal" data-target="#regModal">
+          <a href="#" >注册 </a>
+          
+        </li>
+      </ul>
+    
+    </div><!-- /.navbar-collapse -->
+  </nav>
+ <div class="row">
+ 	<div class="col-md-10 col-md-offset-1 alert alert-info">
+ 		基于NodeJS+Express+EJS+MongoDb的拉勾网后台管理系统
+ 	</div>
+ </div>
+  
+  <!-- 注册模态框 -->
+<div class="modal fade" id="regModal" tabindex="-1">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span>&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">用户注册</h4>
+      </div>
+      <div class="modal-body">
+        <form>
+  <div class="form-group">
+    <label for="regUsername">用户名</label>
+    <input type="text" class="form-control" id="regUsername" placeholder="请输入用户名">
+  </div>
+  <div class="form-group">
+    <label for="regPassword">密码</label>
+    <input type="password" class="form-control" id="regPassword" placeholder="请输入密码">
+  </div>
+  <div class="form-group">
+    <label for="regconPassword">确认密码</label>
+    <input type="password" class="form-control" id="regconPassword" placeholder="请再次输入密码">
+  </div>
+  <div class="form-group">
+    <label for="regemail">邮件</label>
+    <input type="email" class="form-control" id="regemail" placeholder="请输入Email">
+  </div>
+  
+</form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+        <button type="button" class="btn btn-primary">注册</button>
+      </div>
+    </div>
+  </div>
+</div>
+  
+  
+   <!-- 登录模态框 -->
+<div class="modal fade" id="loginModal" tabindex="-1">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span>&times;</span></button>
+        <h4 class="modal-title" id="loginModalLabel">用户登录</h4>
+      </div>
+      <div class="modal-body">
+        <form>
+  <div class="form-group">
+    <label for="loginUsername">用户名</label>
+    <input type="text" class="form-control" id="loginUsername" placeholder="请输入用户名">
+  </div>
+  <div class="form-group">
+    <label for="loginPassword">密码</label>
+    <input type="password" class="form-control" id="loginPassword" placeholder="请输入密码">
+  </div>
+  
+</form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+        <button type="button" class="btn btn-primary">登录</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+ <!-- 管理系统模态框 -->
+<div class="modal fade" id="guanModal" tabindex="-1">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span>&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">职位信息</h4>
+      </div>
+      <div class="modal-body">
+        <form>
+      <div class="form-group">
+    <label for="wenjian">公司 logo</label>
+    <input type="file" class="form-control" id="wenjian" placeholder="未选择任何文件">
+  </div>
+  <div class="form-group">
+    <label for="position">职位名称</label>
+    <input type="text" class="form-control" id="position" placeholder="请输入职位名称">
+  </div>
+  <div class="form-group">
+    <label for="companyname">公司名称</label>
+    <input type="text" class="form-control" id="companyname" placeholder="请输入公司名称">
+  </div>
+  <div class="form-group">
+    <label for="experince">工作经验</label>
+    <input type="text" class="form-control" id="experince" placeholder="请输入工作经验">
+  </div>
+  <div class="form-group">
+    <label for="positiontype">职位类型</label>
+    <input type="text" class="form-control" id="positiontype" placeholder="请输入职位类型">
+  </div>
+  <div class="form-group">
+    <label for="wherework">工作地点</label>
+    <input type="text" class="form-control" id="wherework" placeholder="请输入工作地点">
+  </div>
+  <div class="form-group">
+    <label for="xiwangsalary">薪资期望</label>
+    <input type="text" class="form-control" id="xiwangsalary" placeholder="请输入岗位薪资">
+  </div>
+  
+</form>
+      </div>
+      <div class="modal-footer">
+        
+        <button type="button" class="btn btn-primary">提交</button>
+      </div>
+    </div>
+  </div>
+</div>
+  
+  
+  </div><!-- /.container-fluid -->
+
+<script src="lib/jquery/jquery-1.12.4.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="lib/bootstrap/js/bootstrap.min.js" type="text/javascript" charset="utf-8"></script>
 	</body>
 </html>
